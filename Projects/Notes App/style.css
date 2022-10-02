@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ccc;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.new_note{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid #6563FF;
+    margin-right: 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.pointer{
+    cursor: pointer;
+}
+
+
+.new_note .add_icon{
+    width: 100px;
+    height: 100px;
+}
+
+.txt p{
+    font-size: 25px;
+    color: #403ed5;
+}
+
+.blur{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.add_note{
+    width: max-content;
+    height: max-content;
+    padding: 10px 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    z-index: 2;
+}
+
+.add_note input[type=text]{
+    width: 288px;
+    height: 50px;
+    margin: 10px 0;
+    border: 3px solid #6563FF;
+    padding: 0 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    outline: none;
+    font-size: 17px;
+    color: #403ed5;
+}
+
+.add_note textarea{
+    border: 3px solid #6563FF;
+    outline: none;
+    border-radius: inherit;
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -ms-border-radius: inherit;
+    -o-border-radius: inherit;
+    padding: 5px;
+    font-size: 17px;
+    resize: none;
+    color: #403ed5;
+    font-weight: bold;
+}
+.add_note textarea:hover,
+.add_note textarea:focus,
+.add_note input:hover,
+.add_note input:focus{
+    border-color:#403ed5;
+}
+
+.add_note .btn{
+    margin-top: 10px;
+    padding: 3px 10px;
+    color: #6563FF;
+    border: 3px solid #6563FF;
+    font-size: 22px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: 300ms;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+}
+.add_note .btn:hover{
+    background-color: #6563FF;
+    color: #fff;
+}
+
+.none{display: none;}
+
+.note_item{
+    width: 250px;
+    height: 300px;
+    border: 3px solid #6563FF;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    padding: 20px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.note_item .note_title{
+    color: #6563FF;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.note_title::before,.note_title::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    top: 50%;
+    background: #403ed5;
+}
+.note_title::after{right: 0;}
+.note_title::before{left: 0;}
+
+p.note{
+    color: #6563FF;
+    font-size: 20px;
+}
+
+.note_item .menu_ic{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-image: url(more.svg);
+    background-repeat: no-repeat;
+    bottom: 22px;
+    right: 10px;
+    cursor: pointer;
+}
+.note_item .menu_ic:hover{
+    opacity: 0.7;
+}
+
+.note_item .menu{
+    width: 65px;
+    position: absolute;
+    padding: 3px;
+    bottom: 0px;
+    right: 37px;
+    border: 1px solid #00000031;
+    background-color: #fff;
+}
+
+.note_item .menu p{
+    color: #403ed5;
+    font-size: 17px;
+    cursor: pointer;
+}
+.note_item .menu p:hover{
+    color: #6563FF;
+}
+.note_item .menu p:nth-child(1){
+    border-bottom: 1px solid #6563FF;
+}
